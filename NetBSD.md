@@ -11,4 +11,8 @@ Reboot.
 
 ## Setup
 
-Install all packages as usual. Nothing special here.
+Their package manager works out of the box:
+```
+ # pkgin install git go
+```
+If you try to use `pkg_add`, it'll fail.
