@@ -20,3 +20,25 @@ This is an example of how *not* to do it.
 So one day, I created a VM for all of these OSs and tried to put some advice together if anyone else wants to test cross-platform applications.
 
 I'll only focus on command line testing.
+
+## General tips
+
+### Using vi
+`vi` comes preinstalled as the default editor on many unix-y distributions.
+Basic usage:
+ - Once you open it, you're in normal mode. Naviagte using the arrow keys or hjkl.
+ - Enter insert mode by pressing `i`. Change text by typing or using backspace. You *can not* delete new lines using backspace.
+ - Leave insert mode by pressing `esc`. Exit `vi` by typing `:q` followed by enter in normal mode.
+ - Delete an entire line in normal mode by typing `dd`.
+
+### Documentation for Go
+If you're using a lot of syscalls and such, you'll find a lot of them broken when switching architectures.
+If not already done, [create platform-specific files](https://golang.org/pkg/go/build/#hdr-Build_Constraints).
+
+Each of them should contain platform-specific constants and code.
+
+The default `syscall` package is deprecated since Go 1.4. If you use `x/sys/unix`, the web documentation is only valid for unix.
+See other documentation from any platform for any platform by using go doc:
+```
+GOOS=freebsd go doc x/sys/unix
+```
