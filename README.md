@@ -42,3 +42,9 @@ See other documentation from any platform for any platform by using go doc:
 ```
 GOOS=freebsd go doc x/sys/unix
 ```
+This command-line documentation is very stripped down, use `go doc x/sys/unix -all`.
+
+Alternatively, serve all locally installed packages for a specific architecture as html:
+```
+GOOS=freebsd godoc -http localhost:6060
+```
