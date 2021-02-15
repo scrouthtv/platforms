@@ -16,3 +16,11 @@ Their package manager works out of the box:
  # pkgin install git go
 ```
 If you try to use `pkg_add`, it'll fail.
+
+`git` does not work out of the box since the basic installation does not come with ssl certificates:
+```
+ # pkgin install mozilla-rootcerts
+ # mozilla-rootcerts install
+```
+See https://reddit.com/r/NetBSD/comments/dveadk/ssl_errors_with_git_and_curl/.
+
