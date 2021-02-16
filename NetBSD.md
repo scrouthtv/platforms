@@ -24,4 +24,4 @@ If you try to use `pkg_add`, it'll fail.
 ```
 See https://reddit.com/r/NetBSD/comments/dveadk/ssl_errors_with_git_and_curl/.
 
-`go` does for some weird reason also not work out of the box.
+Install `go` and call it using `go115` (or the version you installed) instead of simply `go`.
